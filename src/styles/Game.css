@@ -1,0 +1,170 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+.game-container h1 {
+  color: #2E7D32;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.mode-selection,
+.board-selection {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.mode-selection h2,
+.board-selection h2 {
+  color: #155f19;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.mode-buttons,
+.board-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mode-buttons button,
+.board-buttons button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.mode-buttons button .button-icon,
+.board-buttons button .button-icon {
+  margin-right: 8px;
+}
+
+/* สีสำหรับปุ่มเลือกกระดาน */
+.board-buttons .board-size-5 {
+  background-color: #20ac24; /* เขียวมาตรฐาน */
+}
+
+.board-buttons .board-size-5:hover {
+  background-color: #0d7712; /* เขียวเข้ม */
+  transform: scale(1.05);
+}
+
+.board-buttons .board-size-6 {
+  background-color: #04cc0e; /* เขียวอ่อน */
+}
+
+.board-buttons .board-size-6:hover {
+  background-color: #388E3C; /* เขียวเข้มกว่าอ่อน */
+  transform: scale(1.05);
+}
+
+.board-buttons .board-size-7 {
+  background-color: #0dca6b; /* เขียวอ่อนมาก */
+}
+
+.board-buttons .board-size-7:hover {
+  background-color: #06703b; /* เขียวมาตรฐาน */
+  transform: scale(1.05);
+}
+
+.board-buttons .board-size-8 {
+  background-color: #52cc0c; /* เขียวอ่อนสุด */
+}
+
+.board-buttons .board-size-8:hover {
+  background-color: #327a08; /* เขียวอ่อน */
+  transform: scale(1.05);
+}
+
+.board-buttons .board-overall {
+  background-color: #82cc0c; /* เขียวเข้มกว่ามาตรฐาน */
+}
+
+.board-buttons .board-overall:hover {
+  background-color: #54800f; /* เขียวเข้ม */
+  transform: scale(1.05);
+}
+
+.mode-buttons button:hover:not(:disabled) {
+  background-color: #2E7D32;
+  transform: scale(1.05);
+}
+
+.mode-buttons button.active {
+  background-color: #2E7D32;
+  font-weight: 500;
+}
+
+.mode-buttons button:disabled {
+  background-color: #A5D6A7;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.results h2 {
+  color: #2e7d63;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.results .result-text {
+  font-size: 1.3rem;
+  color: #3fb991;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.results .backhome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  width: 150px;
+}
+
+.results .backhome .button-icon {
+  margin-right: 8px;
+}
+
+.results .backhome:hover {
+  background-color: #2E7D32;
+  transform: scale(1.05);
+}

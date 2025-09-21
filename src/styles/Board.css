@@ -1,0 +1,145 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+  }
+  
+  .board-container h2 {
+    color: #2E7D32;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .board-container p {
+    font-size: 1.2rem;
+    color: #1B5E20;
+    margin: 5px 0;
+    margin-bottom: 20px;
+  }
+  
+  .board {
+    display: inline-grid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cell {
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #4CAF50;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .cell.path {
+    background: #81C784;
+    color: #1B5E20;
+  }
+  
+  .cell.knight {
+    background: #1976D2;
+    color: white;
+  }
+  
+  .cell.possible {
+    background: #FFF9C4;
+  }
+  
+  .cell .knight-icon {
+    font-size: 24px;
+  }
+  
+  .board-container .controls {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .board-container .controls button {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .board-container .controls button .button-icon {
+    margin-right: 8px;
+  }
+  
+  .board-container .controls button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ปุ่มย้อนกลับ (Undo) - สีน้ำเงิน */
+  .undo {
+    background-color: #646464; /* น้ำเงินเข้ม */
+  }
+  
+  .undo:hover {
+    background-color: #9b9b9b; /* น้ำเงินเข้มขึ้นเมื่อ hover */
+  }
+  
+  /* ปุ่มเริ่มใหม่ (Restart) - สีส้ม */
+  .restart {
+    background-color: #E4A11B ; /* ส้ม */
+  }
+  
+  .restart:hover {
+    background-color: #f1c979  ; /* ส้มเข้มขึ้นเมื่อ hover */
+  }
+  
+  /* ปุ่มตัวช่วย (Help) - สีม่วง */
+  .help {
+    background-color: #4787bc; /* ม่วง */
+  }
+  
+  .help:hover {
+    background-color: #6cb6f1; /* ม่วงเข้มขึ้นเมื่อ hover */
+  }
+  
+  /* ปุ่มตัวช่วยเมื่อเปิด (Active) - สีเหลืองอ่อน */
+  .help.active {
+    background-color: #b028ff; /* เหลืองอ่อน */
+    color: #333; /* เปลี่ยนสีข้อความให้เข้มเพื่ออ่านง่าย */
+  }
+  
+  .help.active:hover {
+    background-color: #bd69ee; /* เหลืองเข้มขึ้นเมื่อ hover */
+  }
+  
+  .help.active .button-icon {
+    color: #333; /* ไอคอนเปลี่ยนสีให้เข้มเมื่อ active */
+  }
+  
+  /* ปุ่มหน้าหลัก (Go Home) - สีเขียว */
+  .gohome {
+    background-color: #4CAF50; /* เขียว (สีหลักของธีม) */
+  }
+  
+  .gohome:hover {
+    background-color: #2E7D32; /* เขียวเข้มขึ้นเมื่อ hover */
+  }
+  
+  .status {
+    font-size: 1.1rem;
+    color: #1B5E20;
+    margin-top: 10px;
+  }
