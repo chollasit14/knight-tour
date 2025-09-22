@@ -1,15 +1,28 @@
+/* Game.css - Responsive Version */
 .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
   padding: 20px;
+  min-height: 90vh;
+  box-sizing: border-box;
 }
 
 .game-container h1 {
   color: #2E7D32;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.game-container h2 {
+  color: #388E3C;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .controls {
@@ -18,12 +31,12 @@
   align-items: center;
   margin: 20px 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .mode-selection,
 .board-selection {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   width: 100%;
   text-align: center;
 }
@@ -31,133 +44,164 @@
 .mode-selection h2,
 .board-selection h2 {
   color: #155f19;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .mode-buttons,
 .board-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .mode-buttons button,
 .board-buttons button {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: center;
+  padding: 12px 20px;
   font-size: 1rem;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
+  transition: all 0.3s ease;
+  min-width: 130px;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .mode-buttons button .button-icon,
 .board-buttons button .button-icon {
   margin-right: 8px;
+  font-size: 1.1rem;
 }
 
-/* สีสำหรับปุ่มเลือกกระดาน */
+/* Board Size Button Colors */
 .board-buttons .board-size-5 {
-  background-color: #20ac24; /* เขียวมาตรฐาน */
+  background-color: #20ac24;
 }
 
 .board-buttons .board-size-5:hover {
-  background-color: #0d7712; /* เขียวเข้ม */
-  transform: scale(1.05);
+  background-color: #0d7712;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(32, 172, 36, 0.4);
 }
 
 .board-buttons .board-size-6 {
-  background-color: #04cc0e; /* เขียวอ่อน */
+  background-color: #04cc0e;
 }
 
 .board-buttons .board-size-6:hover {
-  background-color: #388E3C; /* เขียวเข้มกว่าอ่อน */
-  transform: scale(1.05);
+  background-color: #388E3C;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(4, 204, 14, 0.4);
 }
 
 .board-buttons .board-size-7 {
-  background-color: #0dca6b; /* เขียวอ่อนมาก */
+  background-color: #0dca6b;
 }
 
 .board-buttons .board-size-7:hover {
-  background-color: #06703b; /* เขียวมาตรฐาน */
-  transform: scale(1.05);
+  background-color: #06703b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 202, 107, 0.4);
 }
 
 .board-buttons .board-size-8 {
-  background-color: #52cc0c; /* เขียวอ่อนสุด */
+  background-color: #52cc0c;
 }
 
 .board-buttons .board-size-8:hover {
-  background-color: #327a08; /* เขียวอ่อน */
-  transform: scale(1.05);
+  background-color: #327a08;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(82, 204, 12, 0.4);
 }
 
 .board-buttons .board-overall {
-  background-color: #82cc0c; /* เขียวเข้มกว่ามาตรฐาน */
+  background-color: #82cc0c;
+  font-weight: 600;
 }
 
 .board-buttons .board-overall:hover {
-  background-color: #54800f; /* เขียวเข้ม */
-  transform: scale(1.05);
+  background-color: #54800f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(130, 204, 12, 0.4);
+}
+
+.mode-buttons button {
+  background-color: #4CAF50;
 }
 
 .mode-buttons button:hover:not(:disabled) {
   background-color: #2E7D32;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
 .mode-buttons button.active {
   background-color: #2E7D32;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.5);
 }
 
 .mode-buttons button:disabled {
   background-color: #A5D6A7;
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Results Section */
 .results {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .results h2 {
   color: #2e7d63;
-  font-size: 1.5rem;
-  margin-top: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .results .result-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #3fb991;
-  margin: 10px 0;
+  margin: 8px 0;
   text-align: center;
+  font-weight: 500;
 }
 
 .results .backhome {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 12px 24px;
+  margin-top: 25px;
   font-size: 1rem;
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  width: 150px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
 }
 
 .results .backhome .button-icon {
@@ -166,5 +210,191 @@
 
 .results .backhome:hover {
   background-color: #2E7D32;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .game-container {
+    padding: 15px;
+  }
+  
+  .game-container h1 {
+    font-size: 2rem;
+  }
+  
+  .game-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .controls {
+    max-width: 600px;
+  }
+  
+  .mode-buttons button,
+  .board-buttons button {
+    min-width: 120px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 10px;
+  }
+  
+  .game-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .game-container h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    margin: 15px 0;
+  }
+  
+  .mode-selection,
+  .board-selection {
+    margin-bottom: 20px;
+  }
+  
+  .mode-selection h2,
+  .board-selection h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .mode-buttons,
+  .board-buttons {
+    gap: 10px;
+    padding: 0 5px;
+  }
+  
+  .mode-buttons button,
+  .board-buttons button {
+    min-width: 110px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  .results {
+    padding: 20px;
+    margin-top: 15px;
+  }
+  
+  .results h2 {
+    font-size: 1.4rem;
+  }
+  
+  .results .result-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 8px;
+  }
+  
+  .game-container h1 {
+    font-size: 1.6rem;
+  }
+  
+  .game-container h2 {
+    font-size: 1rem;
+  }
+  
+  .mode-selection h2,
+  .board-selection h2 {
+    font-size: 1.2rem;
+  }
+  
+  .mode-buttons,
+  .board-buttons {
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mode-buttons button,
+  .board-buttons button {
+    width: 100%;
+    max-width: 250px;
+    min-width: unset;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .results {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .results h2 {
+    font-size: 1.3rem;
+  }
+  
+  .results .result-text {
+    font-size: 1rem;
+  }
+  
+  .results .backhome {
+    padding: 14px 20px;
+    min-width: 130px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .game-container {
+    padding: 5px;
+    min-height: auto;
+  }
+  
+  .game-container h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  
+  .game-container h2 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .controls {
+    margin: 10px 0;
+  }
+  
+  .mode-selection,
+  .board-selection {
+    margin-bottom: 10px;
+  }
+  
+  .mode-selection h2,
+  .board-selection h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .mode-buttons,
+  .board-buttons {
+    gap: 6px;
+  }
+  
+  .mode-buttons button,
+  .board-buttons button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
 }

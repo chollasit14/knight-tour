@@ -44,7 +44,8 @@ function Game() {
 
   return (
     <div className="game-container">
-      <h1>Knight's Tour - {playerName}</h1>
+      <h1>Knight's Tour</h1>
+      <h2>"{playerName}"</h2>
       {!boardSize && (
         <div className="controls">
           <div className="mode-selection">
@@ -69,7 +70,7 @@ function Game() {
               {boardSizes.map((size) => (
                 <button
                   key={size}
-                  className={`board-size-${size}`} // เพิ่มคลาสเฉพาะสำหรับแต่ละขนาด
+                  className={`board-size-${size}`}
                   onClick={() => startGame(size)}
                 >
                   <FontAwesomeIcon icon="chess-board" className="button-icon" />
@@ -77,7 +78,7 @@ function Game() {
                 </button>
               ))}
               <button
-                className="board-overall" // เพิ่มคลาสสำหรับปุ่ม Overall
+                className="board-overall"
                 onClick={() => startGame(5, true)}
               >
                 <FontAwesomeIcon icon="star" className="button-icon" />

@@ -13,7 +13,7 @@ function Board({ size, mode, onComplete, playerName }) {
   const [knightPos, setKnightPos] = useState({ x: 0, y: 0 });
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
-  const [status, setStatus] = useState('เริ่มเดินตัวม้า!');
+  const [status, setStatus] = useState('เริ่มเดินอัศวิน!');
   const [possibleMoves, setPossibleMoves] = useState([]);
   const [isHelpActive, setIsHelpActive] = useState(false);
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ function Board({ size, mode, onComplete, playerName }) {
     setMoves([{ ...startPos }]);
     setTime(0);
     setIsRunning(true);
-    setStatus('เริ่มเดินตัวม้า!');
+    setStatus('เริ่มเดินอัศวิน!');
     setPossibleMoves([]);
     setIsHelpActive(false);
   }, [size]);
@@ -135,7 +135,7 @@ function Board({ size, mode, onComplete, playerName }) {
             nx < size &&
             ny >= 0 &&
             ny < size &&
-            newBoard[nx][ny] === 0 // ใช้ newBoard ที่อัปเดตแล้ว
+            newBoard[nx][ny] === 0
           ) {
             possible.push({ x: nx, y: ny });
           }
@@ -210,7 +210,7 @@ function Board({ size, mode, onComplete, playerName }) {
       </p>
       <div
         className="board"
-        style={{ gridTemplateColumns: `repeat(${size}, 50px)` }}
+        style={{ gridTemplateColumns: `repeat(${size}, var(--cell-size, 50px))` }}
       >
         {board.map((row, i) =>
           row.map((cell, j) => (

@@ -1,11 +1,13 @@
+/* App.css - Responsive Version */
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: #E8F5E9; /* เขียวอ่อน */
+  background-color: #E8F5E9;
   font-family: 'Roboto', sans-serif;
   color: #1B5E20;
+  position: relative;
 }
 
 .content {
@@ -13,6 +15,9 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .ad-container {
@@ -35,14 +40,61 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1000;
 }
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .content {
+    padding: 15px;
+  }
+  
+  .side-ad {
+    width: 150px;
+    height: 400px;
+    right: 5px;
+  }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .content {
     padding: 10px;
+    margin: 0;
   }
-
+  
   .side-ad {
     display: none; /* ซ่อน sidebar ในมือถือ */
+  }
+  
+  .top-ad {
+    height: 60px;
+    line-height: 60px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .content {
+    padding: 5px;
+  }
+  
+  .top-ad {
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .content {
+    padding: 10px 5px;
+  }
+  
+  .top-ad {
+    height: 40px;
+    line-height: 40px;
   }
 }
