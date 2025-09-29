@@ -44,6 +44,7 @@ function Game() {
 
   return (
     <div className="game-container">
+      <p className="grayCG">by S.Chollasit</p>
       <h1>Knight's Tour</h1>
       <h2>"{playerName}"</h2>
       {!boardSize && (

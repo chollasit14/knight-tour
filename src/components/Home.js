@@ -19,6 +19,7 @@ function Home() {
 
   return (
     <div className="home-container">
+      <p className="grayCH">by S.Chollasit</p>
       <h1>Knight's Tour</h1>
       <input
         type="text"
